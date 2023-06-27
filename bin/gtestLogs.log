@@ -1,0 +1,50 @@
+2023-06-05 23:23:47,880 [INFO] com.leader.KanbanBoardApplication [restartedMain] Starting KanbanBoardApplication using Java 17.0.5 on lin33003371 with PID 11848 (C:\Users\jsangeet\OneDrive - Capgemini\Desktop\Java\KanbanBoardApplication\target\classes started by jsangeet in C:\Users\jsangeet\OneDrive - Capgemini\Desktop\Java\KanbanBoardApplication)
+2023-06-05 23:23:47,882 [INFO] com.leader.KanbanBoardApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 23:23:47,976 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-05 23:23:47,981 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-05 23:23:48,811 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-05 23:23:48,901 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interfaces.
+2023-06-05 23:23:49,979 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 7001 (http)
+2023-06-05 23:23:50,001 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-05 23:23:50,002 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-06-05 23:23:50,133 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-05 23:23:50,133 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2149 ms
+2023-06-05 23:23:50,458 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-05 23:23:50,548 [INFO] org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-05 23:23:50,817 [INFO] org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-05 23:23:50,971 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-06-05 23:23:51,297 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-06-05 23:23:51,322 [INFO] org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-05 23:23:52,205 [WARN] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Warning Code: 0, SQLState: 00000
+2023-06-05 23:23:52,206 [WARN] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] table "team_leader" does not exist, skipping
+2023-06-05 23:23:52,233 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-05 23:23:52,247 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-05 23:23:52,897 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-05 23:23:53,478 [WARN] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2023-06-05 23:23:53,540 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 7001 (http) with context path ''
+2023-06-05 23:23:53,558 [INFO] com.leader.KanbanBoardApplication [restartedMain] Started KanbanBoardApplication in 6.29 seconds (JVM running for 7.284)
+2023-06-05 23:36:41,594 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-06-05 23:36:41,615 [INFO] org.apache.catalina.core.StandardService [Thread-1] Stopping service [Tomcat]
+2023-06-05 23:36:41,628 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-05 23:36:41,633 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown initiated...
+2023-06-05 23:36:41,639 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown completed.
+2023-06-05 23:36:41,771 [INFO] com.leader.KanbanBoardApplication [restartedMain] Starting KanbanBoardApplication using Java 17.0.5 on lin33003371 with PID 11848 (C:\Users\jsangeet\OneDrive - Capgemini\Desktop\Java\KanbanBoardApplication\target\classes started by jsangeet in C:\Users\jsangeet\OneDrive - Capgemini\Desktop\Java\KanbanBoardApplication)
+2023-06-05 23:36:41,771 [INFO] com.leader.KanbanBoardApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-05 23:36:42,106 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-05 23:36:42,127 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-06-05 23:36:42,271 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 7001 (http)
+2023-06-05 23:36:42,273 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-05 23:36:42,273 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-06-05 23:36:42,308 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-05 23:36:42,308 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 531 ms
+2023-06-05 23:36:42,366 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-05 23:36:42,372 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2023-06-05 23:36:42,483 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2023-06-05 23:36:42,484 [INFO] org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-05 23:36:42,553 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-05 23:36:42,555 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-05 23:36:42,671 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-05 23:36:42,828 [WARN] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2023-06-05 23:36:42,845 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 7001 (http) with context path ''
+2023-06-05 23:36:42,851 [INFO] com.leader.KanbanBoardApplication [restartedMain] Started KanbanBoardApplication in 1.146 seconds (JVM running for 776.576)
+2023-06-05 23:36:42,854 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged

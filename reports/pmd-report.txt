@@ -1,0 +1,172 @@
+src/main/java/com/member/KanbanBoardApplication.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/KanbanBoardApplication.java:7:	UseUtilityClass:	UseUtilityClass: This utility class has a non-private constructor
+src/main/java/com/member/KanbanBoardApplication.java:9:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/KanbanBoardApplication.java:9:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:28:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/member/main/controller/TeamMemberController.java:28:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:30:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:30:	RedundantFieldInitializer:	RedundantFieldInitializer: Avoid using redundant field initializer for 'teamMember'
+src/main/java/com/member/main/controller/TeamMemberController.java:33:	CommentDefaultAccessModifier:	CommentDefaultAccessModifier: Missing commented default access modifier on field 'teamMemberService'
+src/main/java/com/member/main/controller/TeamMemberController.java:33:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:35:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:38:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:44:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:44:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:54:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:61:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:61:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:68:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:68:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'tId' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:75:	AvoidCatchingGenericException:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/com/member/main/controller/TeamMemberController.java:79:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/com/member/main/controller/TeamMemberController.java:85:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:85:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:85:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'password' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:93:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/controller/TeamMemberController.java:93:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/controller/TeamMemberController.java:97:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/member/main/controller/TeamMemberController.java:98:	AvoidCatchingGenericException:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/com/member/main/controller/TeamMemberController.java:102:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/com/member/main/entity/TeamMember.java:9:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/entity/TeamMember.java:9:	DataClass:	DataClass: The class 'TeamMember' is suspected to be a Data Class (WOC=27.273%, NOPA=0, NOAM=8, WMC=13)
+src/main/java/com/member/main/entity/TeamMember.java:13:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/entity/TeamMember.java:14:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/entity/TeamMember.java:15:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/entity/TeamMember.java:16:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/entity/TeamMember.java:17:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/entity/TeamMember.java:18:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/entity/TeamMember.java:22:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/entity/TeamMember.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'password' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'tId' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:31:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/entity/TeamMember.java:34:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/entity/TeamMember.java:34:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'tId' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:40:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:46:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:52:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/com/member/main/entity/TeamMember.java:58:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'password' is not assigned and could be declared final
+src/main/java/com/member/main/exception/InvalidCredentialsException.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/exception/InvalidCredentialsException.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/InvalidCredentialsException.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/main/java/com/member/main/exception/InvalidUserId.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/exception/InvalidUserId.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/InvalidUserId.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/main/java/com/member/main/exception/NullEmailFoundException.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/exception/NullEmailFoundException.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/NullEmailFoundException.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/main/java/com/member/main/exception/NullUserFound.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/exception/NullUserFound.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/NullUserFound.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/main/java/com/member/main/exception/UserControllerAdvice.java:9:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/member/main/exception/UserControllerAdvice.java:9:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/exception/UserControllerAdvice.java:12:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/UserControllerAdvice.java:12:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nufe' is not assigned and could be declared final
+src/main/java/com/member/main/exception/UserControllerAdvice.java:16:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/UserControllerAdvice.java:16:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nufe' is not assigned and could be declared final
+src/main/java/com/member/main/exception/UserControllerAdvice.java:20:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/exception/UserControllerAdvice.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nufe' is not assigned and could be declared final
+src/main/java/com/member/main/repository/TeamMemberRepository.java:6:	UnnecessaryImport:	UnnecessaryImport: Unused import 'org.springframework.stereotype.Repository'
+src/main/java/com/member/main/repository/TeamMemberRepository.java:11:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/repository/TeamMemberRepository.java:15:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/repository/TeamMemberRepository.java:15:	UnnecessaryAnnotationValueElement:	UnnecessaryAnnotationValueElement: Avoid the use of value in annotations when its the only element
+src/main/java/com/member/main/repository/TeamMemberRepository.java:15:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'getTeamMemberbytId': the method is declared in an interface type
+src/main/java/com/member/main/repository/TeamMemberRepository.java:19:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/repository/TeamMemberRepository.java:19:	UnnecessaryAnnotationValueElement:	UnnecessaryAnnotationValueElement: Avoid the use of value in annotations when its the only element
+src/main/java/com/member/main/repository/TeamMemberRepository.java:19:	UnnecessaryAnnotationValueElement:	UnnecessaryAnnotationValueElement: Avoid the use of value in annotations when its the only element
+src/main/java/com/member/main/repository/TeamMemberRepository.java:19:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'findTeamMemberByEmailPassword': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:14:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:16:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:16:	SignatureDeclareThrowsException:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/com/member/main/service/TeamMemberService.java:16:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'addTeamMember': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:19:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:19:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'registerTeamMember': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:21:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:21:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'getAllTeamMember': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:24:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:24:	ShortVariable:	ShortVariable: Avoid variables with short names like id
+src/main/java/com/member/main/service/TeamMemberService.java:24:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'getTeamMemberById': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:26:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:26:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'updateTeamMember': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:30:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:30:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'delete': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberService.java:31:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/member/main/service/TeamMemberService.java:31:	UnnecessaryModifier:	UnnecessaryModifier: Unnecessary modifier 'public' on method 'loginTeamMember': the method is declared in an interface type
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:20:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:20:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:22:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:25:	CommentDefaultAccessModifier:	CommentDefaultAccessModifier: Missing commented default access modifier on field 'teamMemberRepository'
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:25:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:25:	LongVariable:	LongVariable: Avoid excessively long variable names like teamMemberRepository
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:28:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:34:	CyclomaticComplexity:	CyclomaticComplexity: The method 'registerTeamMember(TeamMember)' has a cyclomatic complexity of 14.
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:34:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:41:	AvoidDuplicateLiterals:	AvoidDuplicateLiterals: The String literal "string" appears 4 times in this file; the first occurrence is on line 41
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:41:	LiteralsFirstInComparisons:	LiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:41:	LiteralsFirstInComparisons:	LiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:42:	LiteralsFirstInComparisons:	LiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:42:	LiteralsFirstInComparisons:	LiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:55:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:55:	ShortVariable:	ShortVariable: Avoid variables with short names like id
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:64:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'teamMember' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:66:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'tId' could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:71:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'existingMember' could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:81:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'tId' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:87:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'existingMember' could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:97:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:97:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'password' is not assigned and could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:103:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'tl' could be declared final
+src/main/java/com/member/main/service/TeamMemberServiceImpl.java:103:	ShortVariable:	ShortVariable: Avoid variables with short names like tl
+src/test/java/com/member/KanbanBoardApplicationTests.java:7:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/member/KanbanBoardApplicationTests.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/test/java/com/member/KanbanBoardApplicationTests.java:10:	JUnitTestsShouldIncludeAssert:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/member/KanbanBoardApplicationTests.java:10:	UncommentedEmptyMethodBody:	UncommentedEmptyMethodBody: Document empty method body
+src/test/java/com/member/TeamMemberServiceImplTest.java:16:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/member/TeamMemberServiceImplTest.java:16:	CommentRequired:	CommentRequired: Class comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:18:	CommentRequired:	CommentRequired: Field comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:21:	CommentRequired:	CommentRequired: Field comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:24:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:24:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:24:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/member/TeamMemberServiceImplTest.java:27:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'teamMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:30:	AvoidDuplicateLiterals:	AvoidDuplicateLiterals: The String literal "jane@example.com" appears 5 times in this file; the first occurrence is on line 30
+src/test/java/com/member/TeamMemberServiceImplTest.java:31:	AvoidDuplicateLiterals:	AvoidDuplicateLiterals: The String literal "js123" appears 5 times in this file; the first occurrence is on line 31
+src/test/java/com/member/TeamMemberServiceImplTest.java:33:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'addedMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:35:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:36:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:37:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:41:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:41:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:41:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/member/TeamMemberServiceImplTest.java:42:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'teamMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:48:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'registeredMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:50:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:51:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:52:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:54:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:55:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:56:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:57:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:61:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:61:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:61:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/member/TeamMemberServiceImplTest.java:64:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'allMembers' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:66:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:67:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/member/TeamMemberServiceImplTest.java:71:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:71:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:71:	JUnitTestsShouldIncludeAssert:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/member/TeamMemberServiceImplTest.java:74:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'memberId' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:76:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'teamMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:83:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'member'.
+src/test/java/com/member/TeamMemberServiceImplTest.java:91:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:91:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:91:	JUnitTestsShouldIncludeAssert:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/member/TeamMemberServiceImplTest.java:94:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'teamMember' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:105:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/member/TeamMemberServiceImplTest.java:105:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/member/TeamMemberServiceImplTest.java:105:	JUnitTestsShouldIncludeAssert:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/member/TeamMemberServiceImplTest.java:108:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'memberId' could be declared final
+src/test/java/com/member/TeamMemberServiceImplTest.java:112:	EmptyCatchBlock:	EmptyCatchBlock: Avoid empty catch blocks
