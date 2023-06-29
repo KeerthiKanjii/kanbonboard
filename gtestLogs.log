@@ -32,3 +32,31 @@
 2023-06-29 12:30:52,593 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-06-29 12:30:52,597 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2023-06-29 12:30:52,607 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-06-29 15:24:30,423 [INFO] com.member.TeamMemberServiceImplTest [main] Starting TeamMemberServiceImplTest using Java 17.0.5 on LIN80027430 with PID 15972 (started by kk18 in C:\Users\kk18\Downloads\fsd-main\KanbanBoardApplication)
+2023-06-29 15:24:30,427 [INFO] com.member.TeamMemberServiceImplTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-29 15:24:31,447 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29 15:24:31,524 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interfaces.
+2023-06-29 15:24:32,456 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-29 15:24:32,598 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-29 15:24:32,915 [INFO] org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-29 15:24:33,173 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-29 15:24:33,569 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-29 15:24:33,608 [INFO] org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-29 15:24:34,934 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-29 15:24:34,955 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-29 15:24:36,039 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-29 15:24:36,973 [INFO] com.member.TeamMemberServiceImplTest [main] Started TeamMemberServiceImplTest in 7.13 seconds (JVM running for 9.694)
+2023-06-29 15:24:37,323 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Registering a new team member: TeamMember [ firstName=Jane Smith, lastName=Smith, email=jane@example.com, password=js123]
+2023-06-29 15:24:37,428 [INFO] com.member.TeamMemberServiceImplTest [main] Inside testDeleteTeamMember
+2023-06-29 15:24:37,428 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Deleting team member with ID: 1
+2023-06-29 15:24:37,429 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Fetching team member by ID: 1
+2023-06-29 15:24:37,485 [INFO] com.member.TeamMemberServiceImplTest [main] Inside testAddTeamMember
+2023-06-29 15:24:37,486 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Adding a new team member: TeamMember [ firstName=John Doe, lastName=Doe, email=jane@example.com, password=js123]
+2023-06-29 15:24:37,494 [INFO] com.member.TeamMemberServiceImplTest [main] Inside testUpdateTeamMember
+2023-06-29 15:24:37,499 [INFO] com.member.TeamMemberServiceImplTest [main] Inside testGetAllTeamMembers
+2023-06-29 15:24:37,499 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Fetching all team members
+2023-06-29 15:24:37,554 [INFO] com.member.TeamMemberServiceImplTest [main] Inside testGetTeamMemberById
+2023-06-29 15:24:37,554 [INFO] com.member.main.service.TeamMemberServiceImpl [main] Fetching team member by ID: 1
+2023-06-29 15:24:38,300 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-29 15:24:38,302 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-29 15:24:38,311 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
