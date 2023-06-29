@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TeamMemberServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">KanbanBoardApplication</a> &gt; <a href="index.source.html" class="el_package">com.member.main.service</a> &gt; <span class="el_source">TeamMemberServiceImpl.java</span></div><h1>TeamMemberServiceImpl.java</h1><pre class="source lang-java linenums">package com.member.main.service;
+
+
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.member.main.entity.TeamMember;
+import com.member.main.exception.InvalidCredentialsException;
+import com.member.main.exception.InvalidUserId;
+import com.member.main.exception.NullEmailFoundException;
+import com.member.main.exception.NullUserFound;
+import com.member.main.repository.TeamMemberRepository;
+
+@Service
+<span class="fc" id="L20">public class TeamMemberServiceImpl implements TeamMemberService {</span>
+
+<span class="fc" id="L22">	private static final Logger LOGGER = LoggerFactory.getLogger(TeamMemberServiceImpl.class);</span>
+
+	@Autowired
+	TeamMemberRepository teamMemberRepository;
+
+	@Override
+	public TeamMember addTeamMember(TeamMember teamMember) throws Exception {
+<span class="fc" id="L29">		LOGGER.info(&quot;Adding a new team member: {}&quot;, teamMember);</span>
+<span class="fc" id="L30">		return teamMemberRepository.save(teamMember);</span>
+	}
+
+	@Override
+	public TeamMember registerTeamMember(TeamMember teamMember) throws NullUserFound, NullEmailFoundException {
+<span class="fc" id="L35">		LOGGER.info(&quot;Registering a new team member: {}&quot;, teamMember);</span>
+<span class="pc bpc" id="L36" title="2 of 4 branches missed.">		if (teamMember.getEmail() == null || teamMember.getEmail().isEmpty()) {</span>
+<span class="nc" id="L37">			throw new NullEmailFoundException(&quot;Email id cannot be null&quot;);</span>
+<span class="pc bpc" id="L38" title="2 of 4 branches missed.">		} else if (teamMember.getFirstName().isEmpty() || teamMember.getLastName().isEmpty()</span>
+<span class="pc bpc" id="L39" title="2 of 4 branches missed.">				|| teamMember.getEmail().isEmpty() || teamMember.getPassword().isEmpty()) {</span>
+<span class="nc" id="L40">			throw new NullUserFound(&quot;Error: Null value is not accepted.&quot;);</span>
+<span class="pc bpc" id="L41" title="2 of 4 branches missed.">		} else if (teamMember.getFirstName().equals(&quot;string&quot;) || teamMember.getLastName().equals(&quot;string&quot;)</span>
+<span class="pc bpc" id="L42" title="2 of 4 branches missed.">				|| teamMember.getPassword().equals(&quot;string&quot;) || teamMember.getEmail().equals(&quot;string&quot;)) {</span>
+<span class="nc" id="L43">			throw new NullUserFound(&quot;Error: Null value is not accepted.&quot;);</span>
+		}
+<span class="fc" id="L45">		return teamMemberRepository.save(teamMember);</span>
+	}
+
+	@Override
+	public List&lt;TeamMember&gt; getAllTeamMember() {
+<span class="fc" id="L50">		LOGGER.info(&quot;Fetching all team members&quot;);</span>
+<span class="fc" id="L51">		return teamMemberRepository.findAll();</span>
+	}
+
+	@Override
+	public TeamMember getTeamMemberById(Integer id) throws InvalidUserId {
+<span class="fc" id="L56">		LOGGER.info(&quot;Fetching team member by ID: {}&quot;, id);</span>
+<span class="pc bpc" id="L57" title="2 of 4 branches missed.">		if (id == null || id == 0) {</span>
+<span class="nc" id="L58">			throw new InvalidUserId(&quot;Invalid user ID: &quot; + id);</span>
+		}
+<span class="fc" id="L60">		return teamMemberRepository.getTeamMemberbytId(id);</span>
+	}
+
+	@Override
+	public TeamMember updateTeamMember(TeamMember teamMember) throws InvalidUserId {
+<span class="nc" id="L65">		LOGGER.info(&quot;Updating team member: {}&quot;, teamMember);</span>
+<span class="nc" id="L66">		Integer tId = teamMember.gettId();</span>
+<span class="nc bnc" id="L67" title="All 4 branches missed.">		if (tId == null || tId == 0) {</span>
+<span class="nc" id="L68">			throw new InvalidUserId(&quot;Invalid user ID: &quot; + tId);</span>
+		}
+
+<span class="nc" id="L71">		TeamMember existingMember = getTeamMemberById(tId);</span>
+
+<span class="nc bnc" id="L73" title="All 2 branches missed.">		if (existingMember == null) {</span>
+<span class="nc" id="L74">			throw new InvalidUserId(&quot;No TeamMember exists with the given ID: &quot; + tId);</span>
+		}
+
+<span class="nc" id="L77">		return teamMemberRepository.save(teamMember);</span>
+	}
+
+	@Override
+	public void delete(int tId) throws InvalidUserId {
+<span class="fc" id="L82">		LOGGER.info(&quot;Deleting team member with ID: {}&quot;, tId);</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">		if (tId == 0) {</span>
+<span class="nc" id="L84">			throw new InvalidUserId(&quot;Invalid user ID: &quot; + tId);</span>
+		}
+
+<span class="fc" id="L87">		TeamMember existingMember = getTeamMemberById(tId);</span>
+
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">		if (existingMember == null) {</span>
+<span class="fc" id="L90">			throw new InvalidUserId(&quot;No TeamMember exists with the given ID: &quot; + tId);</span>
+		}
+
+<span class="nc" id="L93">		teamMemberRepository.deleteById(tId);</span>
+<span class="nc" id="L94">	}</span>
+
+	@Override
+	public TeamMember loginTeamMember(String email, String password) throws InvalidCredentialsException {
+<span class="nc" id="L98">		LOGGER.info(&quot;Logging in team member with email: {}&quot;, email);</span>
+<span class="nc bnc" id="L99" title="All 8 branches missed.">		if (email == null || email.isEmpty() || password == null || password.isEmpty()) {</span>
+<span class="nc" id="L100">			throw new InvalidCredentialsException(&quot;Email or Password cannot be empty&quot;);</span>
+		}
+
+<span class="nc" id="L103">		TeamMember tl = teamMemberRepository.findTeamMemberByEmailPassword(email, password);</span>
+
+<span class="nc bnc" id="L105" title="All 2 branches missed.">		if (tl == null) {</span>
+<span class="nc" id="L106">			throw new InvalidCredentialsException(&quot;Invalid email or password&quot;);</span>
+		} 
+		
+
+<span class="nc" id="L110">		return tl;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
