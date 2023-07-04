@@ -2,8 +2,6 @@
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,83 +23,56 @@ import com.member.main.service.TeamMemberService;
 @RestController
 @CrossOrigin(&quot;http://localhost:4200&quot;)
 @RequestMapping(&quot;/TeamMember&quot;)
-<span class="fc" id="L28">public class TeamMemberController {</span>
-
-<span class="fc" id="L30">	private static  String teamMember = null;</span>
+<span class="fc" id="L26">public class TeamMemberController {</span>
 
 	@Autowired
 	TeamMemberService teamMemberService;
 
-<span class="fc" id="L35">	private final Logger mylogs = LoggerFactory.getLogger(this.getClass());</span>
-
 	@GetMapping(&quot;/&quot;)
 	public String defaultMessage() {
-<span class="nc" id="L39">		return &quot;welcome to TeamMember Page&quot;;</span>
-	}
-	
- 
-	@PostMapping(&quot;/registerTeamv&quot;)
-	public TeamMember registerTeamMember(@RequestBody TeamMember teamMember)
-			throws NullUserFound, NullEmailFoundException {
-
-<span class="nc" id="L47">		mylogs.info(&quot;Inside registerTeamMember: {}&quot;, teamMember);</span>
-
-<span class="nc" id="L49">		return teamMemberService.registerTeamMember(teamMember);</span>
-
-	}
-
-	@GetMapping(&quot;/allTeamMember&quot;) // localhost:7001/TeamMemberr/allTeamMember
-	public List&lt;TeamMember&gt; getAllTeamMember() {
-<span class="nc" id="L55">		mylogs.info(&quot;Inside getAllTeamMember&quot;);</span>
-
-<span class="nc" id="L57">		return teamMemberService.getAllTeamMember();</span>
-	}
-
-	@PutMapping(&quot;/updateTeamMember&quot;) // localhost:7001/TeamMember/updateTeamMember
-	public TeamMember updateTeamMember(@RequestBody TeamMember teamMember) throws InvalidUserId {
-<span class="nc" id="L62">		mylogs.info(&quot;Inside updateTeamMember: {}&quot;, teamMember);</span>
-
-<span class="nc" id="L64">		return teamMemberService.updateTeamMember(teamMember);</span>
-	}
-
-	@DeleteMapping(&quot;/delete/{tId}&quot;) // localhost:7001/TeamMember/delete/2
-	public String deleteTeamMemberById(@PathVariable int tId) throws InvalidUserId {
-
-<span class="nc" id="L70">		mylogs.info(&quot;Inside deleteTeamMemberById: {}&quot;, tId);</span>
-		try {
-<span class="nc" id="L72">			teamMemberService.delete(tId);</span>
-
-
-<span class="nc" id="L75">		} catch (Exception e) {</span>
-
-<span class="nc" id="L77">			mylogs.error(&quot;Error occurred while deleting team member with ID: {}&quot;, tId, e);</span>
-
-<span class="nc" id="L79">			e.printStackTrace();</span>
-<span class="nc" id="L80">		}</span>
-<span class="nc" id="L81">		return &quot;Deleted Id = &quot; + tId + &quot; Data&quot;;</span>
-	}
-
-	@GetMapping(&quot;/loginTeamLeader/{email}/{password}&quot;) // localhost:7001/TeamLeader/loginTeamLeader/anu@gmail.com/vijju
-	public TeamMember loginTeamMember(@PathVariable String email, @PathVariable String password)
-			throws InvalidCredentialsException {
-<span class="nc" id="L87">		mylogs.info(&quot;Inside loginTeamMember: email={}, password={}&quot;, email, password);</span>
-
-<span class="nc" id="L89">		return teamMemberService.loginTeamMember(email, password);</span>
+<span class="nc" id="L33">		return &quot;Welcome to TeamMember Page&quot;;</span>
 	}
 
 	@PostMapping(&quot;/registerTeamMember&quot;)
-	public TeamMember addTeamMember(@RequestBody TeamMember teamMember) {
-<span class="nc" id="L94">		mylogs.info(&quot;Inside addTeamMember: {}&quot;, teamMember);</span>
+	public TeamMember registerTeamMember(@RequestBody TeamMember teamMember)
+			throws NullUserFound, NullEmailFoundException {
+<span class="nc" id="L39">		return teamMemberService.registerTeamMember(teamMember);</span>
+	}
 
+	@GetMapping(&quot;/allTeamMember&quot;)
+	public List&lt;TeamMember&gt; getAllTeamMember() {
+<span class="nc" id="L44">		return teamMemberService.getAllTeamMember();</span>
+	}
+
+	@PutMapping(&quot;/updateTeamMember&quot;)
+	public TeamMember updateTeamMember(@RequestBody TeamMember teamMember) throws InvalidUserId {
+<span class="nc" id="L49">		return teamMemberService.updateTeamMember(teamMember);</span>
+	}
+
+	@DeleteMapping(&quot;/delete/{lId}&quot;)
+	public String deleteTeamMemberById(@PathVariable int lId) throws InvalidUserId {
 		try {
-<span class="nc" id="L97">			return teamMemberService.addTeamMember(teamMember);</span>
-<span class="nc" id="L98">		} catch (Exception e) {</span>
-			// TODO Auto-generated catch block
-<span class="nc" id="L100">			mylogs.error(&quot;Error occurred while adding team member: {}&quot;, teamMember, e);</span>
+<span class="nc" id="L55">			teamMemberService.delete(lId);</span>
+<span class="nc" id="L56">		} catch (Exception e) {</span>
+<span class="nc" id="L57">			e.printStackTrace();</span>
+<span class="nc" id="L58">		}</span>
+<span class="nc" id="L59">		return &quot;Deleted Id = &quot; + lId + &quot; Data&quot;;</span>
+	}
 
-<span class="nc" id="L102">			e.printStackTrace();</span>
+	@GetMapping(&quot;/loginTeamMember/{email}/{password}&quot;)
+	public TeamMember loginTeamMember(@PathVariable String email, @PathVariable String password)
+			throws InvalidCredentialsException {
+<span class="nc" id="L65">		return teamMemberService.loginTeamMember(email, password);</span>
+	}
+
+	@PostMapping(&quot;/addTeamMember&quot;)
+	public TeamMember addTeamMember(@RequestBody TeamMember teamMember) {
+		try {
+<span class="nc" id="L71">			return teamMemberService.addTeamMember(teamMember);</span>
+<span class="nc" id="L72">		} catch (Exception e) {</span>
+<span class="nc" id="L73">			e.printStackTrace();</span>
 		}
-<span class="nc" id="L104">		return teamMember;</span>
+<span class="nc" id="L75">		return null; // or handle the exception accordingly</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

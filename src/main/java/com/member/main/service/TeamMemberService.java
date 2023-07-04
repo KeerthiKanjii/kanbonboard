@@ -13,7 +13,7 @@ import com.member.main.exception.NullUserFound;
 @Service
 public interface TeamMemberService {
 
-	public TeamMember addTeamMember(TeamMember teamMember) throws Exception;
+	public TeamMember addTeamMember(TeamMember teamMember) throws NullUserFound ;
 	
 	
 	public TeamMember registerTeamMember(TeamMember teamMember) throws NullUserFound, NullEmailFoundException;
@@ -27,7 +27,7 @@ public interface TeamMemberService {
 
 	
 	
-	public void delete(int tId) throws InvalidUserId;
+	public void delete(int lId) throws InvalidUserId;
 	public TeamMember loginTeamMember(String email, String password) throws InvalidCredentialsException;
 
 

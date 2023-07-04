@@ -10,29 +10,32 @@ public class TeamMember {
 
 	@Id
 	@GeneratedValue
-	private int tId;
+	private int lId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
+	
+	
+	private int tId;
 	public TeamMember() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
-	public TeamMember(int tId, String firstName, String lastName, String email, String password) {
+	public TeamMember(int lId, String firstName, String lastName, String email, String password, int tId) {
 		super();
-		this.tId = tId;
+		this.lId = lId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		
-	}
-	public int gettId() {
-		return tId;
-	}
-	public void settId(int tId) {
 		this.tId = tId;
+	}
+	public int getlId() {
+		return lId;
+	}
+	public void setlId(int lId) {
+		this.lId = lId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -52,16 +55,23 @@ public class TeamMember {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() { 
+	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public int gettId() {
+		return tId;
+	}
+	public void settId(int tId) {
+		this.tId = tId;
+	}
 	@Override
 	public String toString() {
-		return "TeamMember [ firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", password=" + password + "]";
+		return "TeamMember [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password="
+				+ password + ", tId=" + tId + "]";
 	}
+	
 	
 }

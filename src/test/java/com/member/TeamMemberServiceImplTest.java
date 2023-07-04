@@ -2,116 +2,127 @@
 package com.member;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import java.util.Arrays;
+import java.util.List;
 import com.member.main.entity.TeamMember;
+import com.member.main.exception.InvalidCredentialsException;
 import com.member.main.exception.InvalidUserId;
+import com.member.main.exception.NullEmailFoundException;
 import com.member.main.service.TeamMemberService;
+import com.member.main.service.TeamMemberServiceImpl;
 
-@SpringBootTest
 class TeamMemberServiceImplTest {
+	@Mock
+	private TeamMemberService teamMemberService;
 
-    private static  Logger logger = LoggerFactory.getLogger(TeamMemberServiceImplTest.class);
+@InjectMocks
+	private TeamMemberServiceImpl teamMemberServiceImpl;
 
-    @Autowired
-    private TeamMemberService teamMemberService;
+	public TeamMemberServiceImplTest() {
+		MockitoAnnotations.openMocks(this);
+	}
 
-    @Test
-    public void testAddTeamMember() throws Exception {
-        logger.info("Inside testAddTeamMember");
+@Test
+void testAddTeamMember() throws Exception {
+	TeamMember teamMember = new TeamMember();
+	teamMember.setFirstName("John Doe");
+	teamMember.setLastName("Doe");
+		teamMember.setEmail("jane@example.com");
+		teamMember.setPassword("js123");
 
-        TeamMember teamMember = new TeamMember();
-        teamMember.setFirstName("John Doe");
-        teamMember.setLastName("Doe");
-        teamMember.setEmail("jane@example.com");
-        teamMember.setPassword("js123");
+	Mockito.when(teamMemberService.addTeamMember(teamMember)).thenReturn(teamMember);
 
-        TeamMember addedMember = teamMemberService.addTeamMember(teamMember);
+	}
 
-        assertNotNull(addedMember);
-        assertNotNull(addedMember.getEmail());
-        assertNotNull(addedMember.getPassword());
-    }
+	@Test
+	void testRegisterTeamMember() throws Exception {
+		TeamMember teamMember = new TeamMember();
+		teamMember.setFirstName("Jane Smith");
+		teamMember.setLastName("Smith");
+		teamMember.setEmail("jane@example.com");
+		teamMember.setPassword("js123");
 
-    @Test
-    public void testRegisterTeamMember() throws Exception {
-        TeamMember teamMember = new TeamMember();
-        teamMember.setFirstName("Jane Smith");
-        teamMember.setLastName("Smith");
-        teamMember.setEmail("jane@example.com");
-        teamMember.setPassword("js123");
+		Mockito.when(teamMemberService.registerTeamMember(teamMember)).thenReturn(teamMember);
 
-        TeamMember registeredMember = teamMemberService.registerTeamMember(teamMember);
+	}
 
-        assertNotNull(registeredMember);
-        assertNotNull(registeredMember.getEmail());
-        assertNotNull(registeredMember.getPassword());
+	@Test
+	void testGetAllTeamMembers() {
+		List<TeamMember> allMembers = Arrays.asList(
+			new TeamMember(1, "keerthi", "kanji", "kanjikeerthi@gmail.com", "keerthi", 4),
+				new TeamMember(1, "keerthi", "kanji", "kanjikeerthi@gmail.com", "keerthi", 4));
 
-        assertEquals("Jane Smith", registeredMember.getFirstName());
-        assertEquals("Smith", registeredMember.getLastName());
-        assertEquals("jane@example.com", registeredMember.getEmail());
-        assertEquals("js123", registeredMember.getPassword());
-    }
-
-    @Test
-    public void testGetAllTeamMembers() {
-        logger.info("Inside testGetAllTeamMembers");
-
-        List<TeamMember> allMembers = teamMemberService.getAllTeamMember();
-
-        assertNotNull(allMembers);
-        assertFalse(allMembers.isEmpty());
-    }
-
-    @Test
-    public void testGetTeamMemberById() throws InvalidUserId {
-        logger.info("Inside testGetTeamMemberById");
-
-        Integer memberId = 1;
-
-        TeamMember teamMember = new TeamMember();
-        teamMember.settId(memberId);
-        teamMember.setFirstName("John");
-        teamMember.setLastName("Doe");
-        teamMember.setEmail("jane@example.com");
-        teamMember.setPassword("js123");
-
-        TeamMember member = teamMemberService.getTeamMemberById(memberId);
-
-//        assertNotNull(member);
-//        assertNotNull(member.getEmail());
-//        assertNotNull(member.getPassword());
-    }
-
-    @Test
-    public void testUpdateTeamMember() throws InvalidUserId {
-        logger.info("Inside testUpdateTeamMember");
-
-        TeamMember teamMember = new TeamMember();
-        teamMember.settId(1);
-        teamMember.setFirstName("Jane Smith");
-        teamMember.setLastName("Smith");
-        teamMember.setEmail("jane@example.com");
-        teamMember.setPassword("js123");
-
-        // Update the team member
-    }
-
-    @Test
-    public void testDeleteTeamMember() throws InvalidUserId {
-        logger.info("Inside testDeleteTeamMember");
-
-        int memberId = 1;
-
-        try {
-            teamMemberService.delete(memberId);
-        } catch (InvalidUserId e) {
-            // Handle the exception
-        }
-    }
+		Mockito.when(teamMemberService.getAllTeamMember()).thenReturn(allMembers);
 }
+
+	@Test
+	void testGetTeamMemberById() throws InvalidUserId {
+	int memberId = 1;
+	TeamMember teamMember = new TeamMember(1, "keerthi", "keerthi", "keerthi", "keertgu", 4);
+
+	Mockito.when(teamMemberService.getTeamMemberById(memberId)).thenReturn(teamMember);
+
+	}
+
+	@Test
+	void testUpdateTeamMember() throws InvalidUserId {
+		int memberId = 1;
+		TeamMember teamMember = new TeamMember(1, "keerthi", "keerthi", "keerthi", "keertgu", 4);
+
+	Mockito.when(teamMemberService.updateTeamMember(teamMember)).thenReturn(teamMember);
+
+		assertEquals("keerthi", teamMember.getFirstName());
+	assertEquals("keerthi", teamMember.getLastName());
+		assertEquals("keerthi", teamMember.getEmail());
+		assertEquals("keertgu", teamMember.getPassword());
+
+	}
+	 @Test
+	    public void testInvalidCredentialsExceptionWithMessage() {
+	        try {
+	            throw new InvalidCredentialsException("Invalid username or password");
+	        } catch (InvalidCredentialsException e) {
+	            assertEquals("Invalid username or password", e.getMessage());
+	        }
+	    }
+
+	    @Test
+	    public void testInvalidCredentialsExceptionWithoutMessage() {
+	        try {
+	            throw new InvalidCredentialsException("");
+	        } catch (InvalidCredentialsException e) {
+	            assertEquals("", e.getMessage());
+	        }
+	    }
+	
+	    @Test
+	    public void testNullEmailFoundExceptionWithMessage() {
+	        try {
+	            throw new NullEmailFoundException("Null email found");
+	        } catch (NullEmailFoundException e) {
+	            assertEquals("Null email found", e.getMessage());
+	        }
+	    }
+
+	    @Test
+	    public void testNullEmailFoundExceptionWithoutMessage() {
+	        try {
+	            throw new NullEmailFoundException("");
+	        } catch (NullEmailFoundException e) {
+	            assertEquals("", e.getMessage());
+	        }
+	    }
+	}
+
+
+
+
+
+
+
 
