@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
-		<sonar.login>squ_638b3320343e20d558c2062758892b36930e1cb8</sonar.login>
+		<sonar.login>squ_05f5d4bf55eef690329b8cfea0dc17eb33c47830</sonar.login>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,6 +57,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

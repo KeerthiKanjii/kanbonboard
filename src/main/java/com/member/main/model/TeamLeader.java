@@ -1,5 +1,7 @@
 package com.member.main.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 
 
@@ -73,4 +75,5 @@ private int lId;
 		return "TeamLeader [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password="
 				+ password + ", lId=" + lId + "]";
 	}
+	
 }

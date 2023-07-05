@@ -1,11 +1,7 @@
 package com.member.main.service;
 
-
-
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,105 +15,89 @@ import com.member.main.repository.TeamMemberRepository;
 @Service
 public class TeamMemberServiceImpl implements TeamMemberService {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(TeamMemberServiceImpl.class);
+    @Autowired
+    TeamMemberRepository teamMemberRepository;
 
-	@Autowired
-	TeamMemberRepository teamMemberRepository;
+    @Override
+    public TeamMember addTeamMember(TeamMember teamMember) throws NullUserFound {
+        return teamMemberRepository.save(teamMember);
+    }
 
-	@Override
-	public TeamMember addTeamMember(TeamMember teamMember) throws NullUserFound {
-		LOGGER.info("Adding a new team member: {}", teamMember);
-		return teamMemberRepository.save(teamMember);
-	}
+    @Override
+    public TeamMember registerTeamMember(TeamMember teamMember) throws NullUserFound, NullEmailFoundException {
+        if (teamMember.getEmail() == null || teamMember.getEmail().isEmpty()) {
+            throw new NullEmailFoundException("Email id cannot be null");
+        } else if (teamMember.getFirstName().isEmpty() || teamMember.getLastName().isEmpty()
+                || teamMember.getEmail().isEmpty() || teamMember.getPassword().isEmpty()) {
+            throw new NullUserFound("Error: Null value is not accepted.");
+        } else if (isStringValue(teamMember.getFirstName()) || isStringValue(teamMember.getLastName())
+                || isStringValue(teamMember.getPassword()) || isStringValue(teamMember.getEmail())) {
+            throw new NullUserFound("Error: Null value is not accepted.");
+        }
+        return teamMemberRepository.save(teamMember);
+    }
 
-	
-	@Override
-	public TeamMember registerTeamMember(TeamMember teamMember) throws NullUserFound, NullEmailFoundException {
-	    LOGGER.info("Registering a new team member: {}", teamMember);
-	    if (teamMember.getEmail() == null || teamMember.getEmail().isEmpty()) {
-	        throw new NullEmailFoundException("Email id cannot be null");
-	    } else if (teamMember.getFirstName().isEmpty() || teamMember.getLastName().isEmpty()
-	            || teamMember.getEmail().isEmpty() || teamMember.getPassword().isEmpty()) {
-	        throw new NullUserFound("Error: Null value is not accepted.");
-	    } else if (isStringValue(teamMember.getFirstName()) || isStringValue(teamMember.getLastName())
-	            || isStringValue(teamMember.getPassword()) || isStringValue(teamMember.getEmail())) {
-	        throw new NullUserFound("Error: Null value is not accepted.");
-	    }
-	    return teamMemberRepository.save(teamMember);
-	}
+    private boolean isStringValue(String value) {
+        final String STRING_CONSTANT = "string";
+        return value.equals(STRING_CONSTANT);
+    }
 
-	private boolean isStringValue(String value) {
-	    final String STRING_CONSTANT = "string";
-	    return value.equals(STRING_CONSTANT);
-	}
+    @Override
+    public List<TeamMember> getAllTeamMember() {
+        return teamMemberRepository.findAll();
+    }
 
+    @Override
+    public TeamMember getTeamMemberById(Integer id) throws InvalidUserId {
+        if (id == null || id == 0) {
+            throw new InvalidUserId("unknown user: " + id);
+        }
+        return teamMemberRepository.getTeamMemberbylId(id);
+    }
 
-	@Override
-	public List<TeamMember> getAllTeamMember() {
-		LOGGER.info("Fetching all team members");
-		return teamMemberRepository.findAll();
-	}
+    @Override
+    public TeamMember updateTeamMember(TeamMember teamMember) throws InvalidUserId {
+        Integer lId = teamMember.getlId();
+        if (lId == null || lId == 0) {
+            throw new InvalidUserId("Invalid user ID: " + lId);
+        }
 
-	@Override
-	public TeamMember getTeamMemberById(Integer id) throws InvalidUserId {
-	    LOGGER.info("Fetching team member by ID: {}", id);
-	    final String INVALID_USER_ID_MESSAGE = "unknown user: ";
-	    if (id == null || id == 0) {
-	        throw new InvalidUserId(INVALID_USER_ID_MESSAGE + id);
-	    }
-	    return teamMemberRepository.getTeamMemberbylId(id);
-	}
+        TeamMember existingMember = getTeamMemberById(lId);
 
- 
+        if (existingMember == null) {
+            throw new InvalidUserId("No TeamMember exists with the given ID: " + lId);
+        }
 
-	@Override
-	public TeamMember updateTeamMember(TeamMember teamMember) throws InvalidUserId {
-		LOGGER.info("Updating team member: {}", teamMember);
-		Integer lId = teamMember.getlId();
-		if (lId == null || lId == 0) {
-			throw new InvalidUserId("Invalid user ID: " + lId);
-		}
+        return teamMemberRepository.save(teamMember);
+    }
 
-		TeamMember existingMember = getTeamMemberById(lId);
+    @Override
+    public void delete(int lId) throws InvalidUserId {
+        if (lId == 0) {
+            throw new InvalidUserId("Invalid user ID: " + lId);
+        }
 
-		if (existingMember == null) {
-			throw new InvalidUserId("No TeamMember exists with the given ID: " + lId);
-		}
+        TeamMember existingMember = getTeamMemberById(lId);
 
-		return teamMemberRepository.save(teamMember);
-	}
+        if (existingMember == null) {
+            throw new InvalidUserId("No TeamMember exists with the given ID: " + lId);
+        }
 
-	@Override
-	public void delete(int lId) throws InvalidUserId {
-		LOGGER.info("Deleting team member with ID: {}", lId);
-		if (lId == 0) {
-			throw new InvalidUserId("Invalid user ID: " + lId);
-		}
+        teamMemberRepository.deleteById(lId);
+    }
 
-		TeamMember existingMember = getTeamMemberById(lId);
+    @Override
+    public TeamMember loginTeamMember(String email, String password) throws InvalidCredentialsException {
+        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
+            throw new InvalidCredentialsException("Email or Password cannot be empty");
+        }
 
-		if (existingMember == null) {
-			throw new InvalidUserId("No TeamMember exists with the given ID: " + lId);
-		}
+        TeamMember tl = TeamMemberRepository.findTeamMemberByEmailPassword(email, password);
 
-		teamMemberRepository.deleteById(lId);
-	}
+        if (tl == null) {
+            throw new InvalidCredentialsException("Invalid email or password");
+        }
 
-	@Override 
-	public TeamMember loginTeamMember(String email, String password) throws InvalidCredentialsException {
-		LOGGER.info("Logging in team member with email: {}", email);
-		if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
-			throw new InvalidCredentialsException("Email or Password cannot be empty");
-		}
-
-		TeamMember tl = teamMemberRepository.findTeamMemberByEmailPassword(email, password);
-
-		if (tl == null) {
-			throw new InvalidCredentialsException("Invalid email or password");
-		} 
-		
-
-		return tl;
-	}
-
+        return tl;
+    }
 }

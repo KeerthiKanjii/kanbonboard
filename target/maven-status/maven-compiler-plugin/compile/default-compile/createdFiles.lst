@@ -1,11 +1,13 @@
 com\member\KanbanBoardApplication.class
 com\member\main\exception\InvalidUserId.class
-com\member\main\exception\UserControllerAdvice.class
 com\member\main\service\TeamMemberService.class
+com\member\main\entity\TeamMember.class
+com\member\main\exception\UserControllerAdvice.class
 com\member\main\exception\NullEmailFoundException.class
+com\member\main\model\RequiredResponse.class
 com\member\main\controller\TeamMemberController.class
 com\member\main\service\TeamMemberServiceImpl.class
+com\member\main\model\TeamLeader.class
 com\member\main\exception\InvalidCredentialsException.class
 com\member\main\exception\NullUserFound.class
-com\member\main\entity\TeamMember.class
 com\member\main\repository\TeamMemberRepository.class

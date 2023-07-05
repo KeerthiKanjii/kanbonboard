@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TeamLeader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">KanbanBoardApplication</a> &gt; <a href="index.source.html" class="el_package">com.member.main.model</a> &gt; <span class="el_source">TeamLeader.java</span></div><h1>TeamLeader.java</h1><pre class="source lang-java linenums">package com.member.main.model;
+
+import java.util.Objects;
+
+import javax.persistence.Entity;
+
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class TeamLeader {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int tId;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+	
+private int lId;
+
+	public TeamLeader() {
+<span class="fc" id="L26">		super();</span>
+<span class="fc" id="L27">	}</span>
+	public TeamLeader(int tId, String firstName, String lastName, String email, String password, int lId) {
+<span class="fc" id="L29">		super();</span>
+<span class="fc" id="L30">		this.tId = tId;</span>
+<span class="fc" id="L31">		this.firstName = firstName;</span>
+<span class="fc" id="L32">		this.lastName = lastName;</span>
+<span class="fc" id="L33">		this.email = email;</span>
+<span class="fc" id="L34">		this.password = password;</span>
+<span class="fc" id="L35">		this.lId = lId;</span>
+<span class="fc" id="L36">	}</span>
+	public int gettId() {
+<span class="fc" id="L38">		return tId;</span>
+	}
+	public void settId(int tId) {
+<span class="fc" id="L41">		this.tId = tId;</span>
+<span class="fc" id="L42">	}</span>
+	public String getFirstName() {
+<span class="fc" id="L44">		return firstName;</span>
+	}
+	public void setFirstName(String firstName) {
+<span class="fc" id="L47">		this.firstName = firstName;</span>
+<span class="fc" id="L48">	}</span>
+	public String getLastName() {
+<span class="fc" id="L50">		return lastName;</span>
+	}
+	public void setLastName(String lastName) {
+<span class="fc" id="L53">		this.lastName = lastName;</span>
+<span class="fc" id="L54">	}</span>
+	public String getEmail() {
+<span class="fc" id="L56">		return email;</span>
+	}
+	public void setEmail(String email) {
+<span class="fc" id="L59">		this.email = email;</span>
+<span class="fc" id="L60">	}</span>
+	public String getPassword() {
+<span class="fc" id="L62">		return password;</span>
+	}
+	public void setPassword(String password) {
+<span class="fc" id="L65">		this.password = password;</span>
+<span class="fc" id="L66">	}</span>
+	public int getlId() {
+<span class="fc" id="L68">		return lId;</span>
+	}
+	public void setlId(int lId) {
+<span class="fc" id="L71">		this.lId = lId;</span>
+<span class="fc" id="L72">	}</span>
+	@Override
+	public String toString() {
+<span class="fc" id="L75">		return &quot;TeamLeader [firstName=&quot; + firstName + &quot;, lastName=&quot; + lastName + &quot;, email=&quot; + email + &quot;, password=&quot;</span>
+				+ password + &quot;, lId=&quot; + lId + &quot;]&quot;;
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

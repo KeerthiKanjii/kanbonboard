@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 	@ExceptionHandler(NullUserFound.class)
 	public ResponseEntity&lt;String&gt; nullUserFoundException(NullUserFound nufe) {
-<span class="nc" id="L13">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
+<span class="fc" id="L13">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
 	}
 	@ExceptionHandler(NullEmailFoundException.class)
 	public ResponseEntity&lt;String&gt; nullEmailFoundException(NullEmailFoundException nufe) {
-<span class="nc" id="L17">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
+<span class="fc" id="L17">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
 	}
 	@ExceptionHandler(InvalidUserId.class)
 	public ResponseEntity&lt;String&gt; invalidUserId(InvalidUserId nufe) {
-<span class="nc" id="L21">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
+<span class="fc" id="L21">		return new ResponseEntity&lt;&gt;(nufe.getMessage(),HttpStatus.BAD_GATEWAY);</span>
 	}
 	
 }

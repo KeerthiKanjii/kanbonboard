@@ -16,7 +16,10 @@ public interface TeamMemberRepository extends JpaRepository<TeamMember, Integer>
 
 	
 	@Query("from TeamMember tl where tl.email=:email and tl.password=:password")
-	public TeamMember findTeamMemberByEmailPassword(@Param(value="email") String email, @Param(value="password")String password);
+	public static TeamMember findTeamMemberByEmailPassword(@Param(value="email") String email, @Param(value="password")String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 }
